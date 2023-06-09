@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="row">
+        <div *ngFor="let favorite of favorites" class="col-md-12">
+            <a [routerLink]="['/movie', favorite]">Movie ID: {{ favorite }}</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+    <input [(ngModel)]="searchQuery" (keyup.enter)="search()" placeholder="Search for movies...">
+    <button (click)="search()">Search</button>
+
+    <div *ngFor="let movie of movies">
+        <h2>{{ movie.title }}</h2>
+        <p>{{ movie.overview }}</p>
+        <a [routerLink]="['/movie', movie.id]">Details</a>
+        <button (click)="toggleLike(movie)">{{ movie.liked ? 'Unlike' : 'Like' }}</button>
+        <button (click)="toggleFavorite(movie)">{{ movie.favorited ? 'Remove from favorites' : 'Add to favorites' }}</button>
+    </div>
+</div>

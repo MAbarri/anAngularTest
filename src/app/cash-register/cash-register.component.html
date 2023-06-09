@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 class="mb-4">Cash Register Page</h1>
+
+    <div class="mb-3">
+        <label for="price" class="form-label">Item price:</label>
+        <input type="number" class="form-control" id="price" [(ngModel)]="price" />
+        <button class="btn btn-primary mt-2" (click)="addItem(price)">Add Item</button>
+    </div>
+
+    <div class="mb-3">
+        <label for="amountPaid" class="form-label">Amount Paid:</label>
+        <input type="number" class="form-control" id="amountPaid" [(ngModel)]="amountPaid" />
+        <button class="btn btn-primary mt-2" (click)="pay(amountPaid)">Pay</button>
+    </div>
+
+    <div>
+        <p>Total: {{ sum }}</p>
+        <p>10 Euros: {{ tens }}</p>
+        <p>5 Euros: {{ fives }}</p>
+        <p>1 Euro: {{ ones }}</p>
+    </div>
+</div>
